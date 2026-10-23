@@ -14,4 +14,6 @@ Playground: [http://127.0.0.1:3000/playground](http://127.0.0.1:3000/playground)
 
 A model turn needs a Cursor credential on this computer (`npx @grok/agent-sdk login`). `validate`, `info`, and `tool call` do not.
 
-Ask it about the association, the head school, programs, or a verified instructor. It will say when a schedule, fee, address, phone, or email is not in the local record, and point to the public contact form.
+In the playground it talks with you, searches the web, reads and writes files on this computer, and writes and runs code. The shared working directory is your home folder. Association facts still come from `bot/lib/catalog.ts` first. A schedule, fee, address, phone, or email that is missing there is looked up on the web; if that search is empty, it points to the public contact form.
+
+The file and shell tools are not sandboxed. A person using the playground can ask the agent to read or change files on this computer and to run commands.

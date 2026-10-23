@@ -25,7 +25,7 @@ export default defineEval({
         t.calledTool("lookup_association");
         t.notCalledTool("lookup_lineage");
         t.check(t.reply, includes(/Williamsport|Appalachian/));
-        t.check(t.reply, includes(/not in this record|does not include|contact/i));
+        t.check(t.reply, includes(/contact|https?:\/\//i));
       },
     },
   ],
